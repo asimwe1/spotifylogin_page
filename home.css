@@ -1,57 +1,73 @@
-.container {
-    text-align: center;
-    background-color: #121212;
-    position: relative;
-    font-family: sans-serif;
-}
+body {
+      background-color: #121212;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
 
-.form {
-    align-items: center;
-    margin-left: 3rem;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    background-color: #181818;
-    width: 35rem;
-    align-items: left;
-    align-items: center;
-    border-radius: 0.5rem;
-}
+    .bi-spotify {
+      color: #1DB954;
+      text-align: center;
+      /* padding-left: 12rem; */
+      padding-bottom: 1.5rem;
+    }
 
-#input{
-    border-radius: 0.5rem;
-    margin-bottom: 0.8rem;
-    width: 22rem;
-    height: 2.3rem;
-}
+    .container {
+      display: flex;
+      flex-direction: column;
+      max-width: 450px;
+      margin: 0 auto;
+      padding: 40px 0;
+      justify-content: center;
+      width: 100vh;
+      align-items: center;
+      top: 50%;
+    }
 
-button {
-    background-color: rgb(0, 255, 127);
-    margin-top: 0.5rem;
-    width: 22.6rem;
-    height: 3rem;
-    border-radius: 1.5rem;
-}
- 
-link {
-    text-decoration: none;
-}
+    .form {
+      background-color: #181818;
+      border-radius: 8px;
+      padding: 20px;
+    }
 
+    .form-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
 
+    .form-input {
+      display: block;
+      width: 100%;
+      height: 40px;
+      border: none;
+      border-radius: 4px;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
 
+    .form-button {
+      display: block;
+      width: 100%;
+      height: 48px;
+      border: none;
+      border-radius: 24px;
+      background-color: #1DB954;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
 
+    .form-link {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      color: #B3B3B3;
+      margin-top: 10px;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    .bi-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
