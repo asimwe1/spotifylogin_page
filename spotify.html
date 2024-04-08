@@ -100,23 +100,22 @@
   </div>
 
   <script>
-    // JavaScript code for handling the login logic
-    // Get the elements from the document
-    var username = document.getElementById("username");
+
+var username = document.getElementById("username");
     var password = document.getElementById("password");
     var login = document.getElementById("login");
 
-    // Add a click event listener to the login button
+
     login.addEventListener("click", function () {
 
-      // Get the values from the input fields
+
       var usernameValue = username.value.trim();
       var passwordValue = password.value.trim();
 
-      // Check if the values are not empty
+
       if (usernameValue && passwordValue) {
 
-        // Send a POST request to the Spotify API with the credentials
+
         fetch("https://accounts.spotify.com/api/token", {
           method: "POST",
           headers: {
@@ -125,31 +124,31 @@
           body: "grant_type=password&username=" + usernameValue + "&password=" + passwordValue
         })
           .then(function (response) {
-            // Check if the response status is OK
+
             if (response.ok) {
-              // Parse the response as JSON
+
               return response.json();
             } else {
-              // Throw an error with the status text
+
               throw new Error(response.statusText);
             }
           })
           .then(function (data) {
-            // Check if the data contains an access token
+
             if (data.access_token) {
-              // Redirect to the Spotify dashboard with the access token
+
               window.location.href = "https://open.spotify.com/?access_token=" + data.access_token;
             } else {
-              // Display an alert with the error message
+
               alert(data.error_description);
             }
           })
           .catch(function (error) {
-            // Display an alert with the error message
+
             alert(error.message);
           });
       } else {
-        // Display an alert with a validation message
+
         alert("Please enter your username and password.");
       }
 
